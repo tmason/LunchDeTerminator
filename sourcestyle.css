@@ -2,13 +2,17 @@
     font-family: 'Terminator'; /*a name to be used later*/
     src: url('./terminator real nfi.ttf'); /*URL to font*/
 }
+head
+{
+	text-align: center;
+}
 h1
 {
-		font-family: 'Terminator';
-		text-align: center;
-		background: -webkit-linear-gradient(#aaa, #333);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+	font-family: 'Terminator';
+	text-align: center;
+	background: -webkit-linear-gradient(#aaa, #333);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 body 
 {
