@@ -6,15 +6,25 @@ h1
 {
 		font-family: 'Terminator';
 		text-align: center;
+		background: -webkit-linear-gradient(#aaa, #333);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 }
 body 
 {
 	font-family: 'Terminator';
 	text-align: center;
-	
+	background: -webkit-linear-gradient(#eee, #333);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 #gif
 {
 	background-image: url(http://i.giflike.com/lVSWMBm_sg.gif);
 	text-align: center;
+}
+img
+{
+	height: 600px;
+	width: auto;
 }
