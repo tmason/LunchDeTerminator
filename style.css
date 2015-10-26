@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Terminator'; /*a name to be used later*/
+    src: url('./terminator real nfi.ttf'); /*URL to font*/
+}
+h1
+{
+		font-family: 'Terminator';
+		text-align: center;
+}
+body 
+{
+	font-family: 'Terminator';
+	text-align: center;
+	
+}
+#gif
+{
+	background-image: url(http://i.giflike.com/lVSWMBm_sg.gif);
+	text-align: center;
+}
