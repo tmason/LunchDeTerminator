@@ -198,7 +198,7 @@ class ArnoldParser extends Parser {
   }
   
   def RandomNum: Rule1[RandomNode] = rule {
-    "@" ~ Random  ~> ((matched: String) => RandomNode(0))
+    Random  ~ oneOrMore("0" - "9") ~> ((matched: String) => NumberNode(matched.toInt))
   }
 
   def parse(expression: String): RootNode = {
