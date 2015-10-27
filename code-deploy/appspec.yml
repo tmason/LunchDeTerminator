@@ -1,0 +1,15 @@
+version: 0.0
+os: linux
+hooks:
+  BeforeInstall:
+    - location: scripts/deregister_from_elb.sh
+    - location: scripts/application_stop.sh
+    - location: scripts/before_install.sh
+      runas: root
+  ApplicationStart:
+    - location: scripts/application_start.sh
+    - location: scripts/register_with_elb.sh
+      runas: root
+  ValidateService:
+    - location: scripts/validate_service.sh
+      runas: root
