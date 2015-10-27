@@ -110,11 +110,11 @@ class ArnoldParser extends Parser {
   }
 
   def Operand: Rule1[OperandNode] = rule {
-    Number | Variable | Boolean | RandomNum
+    Number | Variable | Boolean | RandomNumber
   }
 
   def Expression: Rule1[AstNode] = rule {
-    SetValueExpression ~
+    (SetValueExpression | RandomNum) ~
       (zeroOrMore(ArithmeticOperation | LogicalOperation))
   }
 
@@ -186,6 +186,10 @@ class ArnoldParser extends Parser {
       "-" ~ oneOrMore("0" - "9") ~> ((matched: String) => NumberNode(-matched.toInt))
   }
 
+  def RandomNumber: Rule1[RandomNode] = rule {
+    oneOrMore("0" - "9") ~> ((matched: String) => RandomNode(matched.toInt))
+  }
+
   def Boolean: Rule1[NumberNode] = rule {
     "@" ~ True ~> (_ => NumberNode(1)) |
       "@" ~ False ~> (_ => NumberNode(0))
@@ -197,8 +201,8 @@ class ArnoldParser extends Parser {
     }) ~> StringNode
   }
   
-  def RandomNum: Rule1[RandomNode] = rule {
-    Random  ~ oneOrMore("0" - "9") ~> ((matched: String) => NumberNode(matched.toInt))
+  def RandomNum: Rule1[OperandNode] = rule {
+    Random ~ WhiteSpace ~ operand ~ EOL
   }
 
   def parse(expression: String): RootNode = {

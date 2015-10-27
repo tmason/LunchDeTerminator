@@ -7,8 +7,8 @@ import scala.util.Random
 
 case class RandomNode(number: Int) extends NumberNode {
 	def generate(mv: MethodVisitor, SymbolTable: SymbolTable) {
-		number = new scala.util.Random
-		1 to 1000 map{ _ => RandomNum.nextInt(1)}
+		randomizer = new scala.util.Random
+		var number = randomizer.nextInt(1000)
 
 		mv.visitIntInsn(SIPUSH, number)
 	}

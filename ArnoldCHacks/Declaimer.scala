@@ -112,7 +112,7 @@ object Declaimer {
     case NumberNode(num)    => say(num.toString)
     case StringNode(str)    => say(str)
     case VariableNode(name) => say(name)
-    case RandomNode(num)    => say(num.ToString)
+    case RandomNode(num)    => say(num.toString)
 
     case other              => say(s"${p.ParseError} $other")
   }
