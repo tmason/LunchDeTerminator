@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Terminator'; /*a name to be used later*/
-    src: url('../assets/terminator real nfi.ttf'); /*URL to font*/
+    src: url('/terminator real nfi.ttf'); /*URL to font*/
 }
 h1
 {
@@ -10,7 +10,7 @@ h1
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 }
-body 
+body
 {
 	font-family: 'Terminator';
 	text-align: center;
