@@ -17,10 +17,9 @@ module.exports = function createServer(config, cb) {
   app.use(express.static('lib'));
 
   io.on('connection', function (socket) {
-    socket.on('getFood', function () {
+    socket.on('getFood', function (data, callback) {
       var result = getFood();
-
-      socket.emit('returnFood',  { data: result });
+	  callback(result);
     });
   });
 
