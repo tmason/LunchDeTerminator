@@ -13,6 +13,7 @@ module.exports = function createServer(config, cb) {
   app.use(express.static('web'));
   app.use(express.static('styles'));
   app.use(express.static('assets'));
+  app.use(express.static('Food pictures'));
   app.use(express.static('lib'));
 
   io.on('connection', function (socket) {
