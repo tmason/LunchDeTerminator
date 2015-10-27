@@ -12,18 +12,18 @@
     "test": "deTerminator_log_level=error istanbul cover ./node_modules/mocha/bin/_mocha -- --recursive --reporter spec && jslint -- *.js ./**/*.js && istanbul check-coverage --statement 100 --branch 100 --function 100",
     "cov": "istanbul cover ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec -t 5000; x-www-browser ./coverage/lcov-report/index.html"
   },
-  "license": "Copyright 360 Incentives Inc.",
+  "license": "UNLICENSED",
   "name": "deTerminator",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/360incentives/deTerminator.git"
+    "url": "https://github.com/tmason/LunchDeTerminator.git"
   },
   "author": "",
   "bugs": {
-    "url": "https://github.com/360incentives/deTerminator/issues"
+    "url": "https://github.com/tmason/LunchDeTerminator/issues"
   },
-  "homepage": "https://github.com/360incentives/deTerminator",
+  "homepage": "https://github.com/tmason/LunchDeTerminator",
   "devDependencies": {
     "chai": "^3.4.0",
     "istanbul": "^0.4.0",
