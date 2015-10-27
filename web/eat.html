@@ -4,6 +4,7 @@
 <head>
 <h1>What do you not want to eat?</h1>
 <link rel="stylesheet" type="text/css" href="/sourcestyle.css">
+<script src="/socket.io/socket.io.js"></script>
 <script src="/scripts.js"></script>
 </head>
 
@@ -13,41 +14,69 @@
 <p> <a href="/homearnold.html"> Back To Home </a> </p>
 </br>
 
-<input type="checkbox" name="color" value="0" onclick="playSound('/RandomArnoldQuotes/t2_no_problemo.wav');">
+<input type="checkbox" id="pizza" name="color" value="0" onclick="playSound('/RandomArnoldQuotes/t2_no_problemo.wav');">
 Pizza<br>
 
-<input type="checkbox" name="color" value="1" onclick="playSound('/RandomArnoldQuotes/daddy.wav');">
+<input type="checkbox" id="burger" name="color" value="1" onclick="playSound('/RandomArnoldQuotes/daddy.wav');">
 Burger<br>
 
-<input type="checkbox" name="color" value="2" onclick="playSound('/RandomArnoldQuotes/you_are_mine.wav');">
+<input type="checkbox" id="fancy" name="color" value="2" onclick="playSound('/RandomArnoldQuotes/you_are_mine.wav');">
 Fancy<br>
 
-<input type="checkbox" name="color" value="3" onclick="playSound('/RandomArnoldQuotes/erased.wav');">
+<input type="checkbox" id="asian" name="color" value="3" onclick="playSound('/RandomArnoldQuotes/erased.wav');">
 Asian<br>
 
-<input type="checkbox" name="color" value="4" onclick="playSound('/RandomArnoldQuotes/t1_clothes_x.wav');">
+<input type="checkbox" id="sandwiches" name="color" value="4" onclick="playSound('/RandomArnoldQuotes/t1_clothes_x.wav');">
 Sandwiches<br>
 
-<input type="checkbox" name="color" value="5" onclick="playSound('/RandomArnoldQuotes/t1_give_me_your_address.wav');">
+<input type="checkbox" id="schwarma" name="color" value="5" onclick="playSound('/RandomArnoldQuotes/t1_give_me_your_address.wav');">
 Shwarma<br>
 
-<input type="checkbox" name="color" value="6" onclick="playSound('/RandomArnoldQuotes/t2_terminator.wav');">
+<input type="checkbox" id="eatAtYourDesk" name="color" value="6" onclick="playSound('/RandomArnoldQuotes/t2_terminator.wav');">
 Eat at your Desk<br>
 
 
-<div id="div1" class="hiddendiv"> Pizza </div>
+<div id="div1" class="hiddendiv">
+	Pizza - Pizza Pizza
+	</br>
+	<img src="/PizzaPizza.jpg" />
+</div>
 
-<div id="div2" class="hiddendiv"> Burger </div>
+<div id="div2" class="hiddendiv">
+	Burger - Johnny's North End Burger
+	</br>
+	<img src="/johnnysnorthendburger.jpg" />
+</div>
 
-<div id="div3" class="hiddendiv"> Fancy </div>
+<div id="div3" class="hiddendiv">
+	Fancy - Kelseys
+	</br>
+	<img src="/kelseys.jpg" />
+</div>
 
-<div id="div4" class="hiddendiv"> Asian </div>
+<div id="div4" class="hiddendiv">
+	Asian - Pho
+	</br>
+	<img src="/Pho.jpg" />
+</div>
 
-<div id="div5" class="hiddendiv"> Sandwiches </div>
+<div id="div5" class="hiddendiv">
+	Sandwiches - Antonio's
+	</br>
+	<img src="/antonios.jpg" />
+</div>
 
-<div id="div6" class="hiddendiv"> Schwarma </div>
+<div id="div6" class="hiddendiv">
+	Schwarma - Estera
+	</br>
+	<img src="/estera.jpg" />
+</div>
 
-<div id="div7" class="hiddendiv"> Eat at your Desk! </div>
+<div id="div7" class="hiddendiv">
+	Eat at your Desk!
+	</br>
+	<img src="/eatatyourdesk.jpg" />
+</div>
 
 <p class="determinate"> <a href="#" onclick="randomShowDiv();" > Lunch De-Terminate! </a> </p>
 
