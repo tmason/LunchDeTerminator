@@ -38,3 +38,17 @@ iframe
 	height: 700px;
 	width: 750px;
 }
+.determinate
+{
+	text-align: center;
+}
+.hiddendiv 
+{
+	display:none;
+	text-align: center;
+}
+.visiblediv 
+{
+	display:block;
+	text-align: center;
+}
