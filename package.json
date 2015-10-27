@@ -4,6 +4,7 @@
   "dependencies": {
     "beatrix": "http://reggie.360incentives.io:8083/package/beatrix/gte/1.3/lt/2",
     "bunyan-err-serializer": "http://reggie.360incentives.io:8083/package/bunyan-err-serializer/gte/0/lt/1",
+    "express": "^4.13.3",
     "rc": "git+https://github.com/360incentives/rc.git",
     "stats": "http://reggie.360incentives.io:8083/package/stats/gte/0/lt/1"
   },

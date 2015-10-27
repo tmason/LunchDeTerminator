@@ -1,16 +1,18 @@
-var beatrix = require('beatrix');
-var Exec = require('child_process').exec;
+var express = require('express');
+var http = require('http');
+var app = express();
+var server = http.Server(app);
+var router = express.Router();
 
-module.exports = function createServer(config) {
-  var app = beatrix.bootstrapService(config.name, config.port, config);
-  app.server.get('/', function (req, res, next) {
-    res.send(200, 'Hello World! ' + req.headers['user-agent']);
-    next();
-  });
+var HomeRoute = require('./routes/home');
 
-    var child = Exec('java determinator', function(err, output) {
-        console.log(output);
-    });
-    console.log(child);
-  return app.server;
+module.exports = function createServer(config, cb) {
+  app.use(express.static('web'));
+  app.use(express.static('styles'));
+  app.use(express.static('assets'));
+  app.use(express.static('lib'));
+
+  app.get('/', HomeRoute);
+
+  server.listen(config.port, cb.bind(null, app.get('env'), app.get('host'), config.port));
 };
