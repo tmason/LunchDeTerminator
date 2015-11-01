@@ -2,7 +2,6 @@ var express = require('express');
 var http = require('http');
 var app = express();
 var server = http.Server(app);
-var router = express.Router();
 var hbs = require('hbs');
 
 module.exports = function createServer(config, cb) {
